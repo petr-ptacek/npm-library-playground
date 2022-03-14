@@ -1,11 +1,12 @@
 {
   "name": "@petr-ptacek/npm-library-playground",
+  "type": "module",
   "version": "1.0.1",
   "description": "The library to test npm and npmjs.com",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "exports": {
-    "./": "./dist/index.js",
+    ".": "./dist/index.js",
     "./math": "./dist/math/index.js",
     "./string": "./dist/string/index.js"
   },
