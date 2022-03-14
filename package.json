@@ -6,14 +6,14 @@
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "exports": {
-    ".": "./dist/index.js",
-    "math": {
-      "import": "./dist/math/index.js",
-      "types": "./types/math/index.d.ts"
+    "./": "./dist/index.js",
+    "./math": {
+      "types": "./types/math/index.d.ts",
+      "import": "./dist/math/index.js"
     },
-    "string": {
-      "import": "./dist/string/index.js",
-      "types": "./types/string/index.d.ts"
+    "./string": {
+      "types": "./types/string/index.d.ts",
+      "import": "./dist/string/index.js"
     }
   },
   "types": "./types/index.d.ts",
