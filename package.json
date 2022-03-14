@@ -1,0 +1,28 @@
+{
+  "name": "@petr-ptacek/npm-library-playground",
+  "version": "1.0.0",
+  "description": "The library to test npm and npmjs.com",
+  "main": "./dist/index.js",
+  "types": "./types",
+  "scripts": {
+    "clear": "rimraf ./dist ./types",
+    "build": "npm run build:ts & npm run build:types",
+    "build:ts": "rimraf ./dist & tsc --project ./tsconfig.base.json",
+    "build:types": "rimraf ./types & tsc --project ./tsconfig.types.json"
+  },
+  "keywords": [
+    "library",
+    "npm",
+    "npmjs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petr-ptacek/npm-library-playground.git"
+  },
+  "author": "Petr Ptacek <petr.ptacek99@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "typescript": "^4.6.2"
+  }
+}
