@@ -6,12 +6,12 @@
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "exports": {
-    "./": "./dist/index.js",
-    "./math": {
+    ".": "./dist/index.js",
+    "math": {
       "import": "./dist/math/index.js",
       "types": "./types/math/index.d.ts"
     },
-    "./string": {
+    "string": {
       "import": "./dist/string/index.js",
       "types": "./types/string/index.d.ts"
     }
