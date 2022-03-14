@@ -5,7 +5,11 @@
   "description": "The library to test npm and npmjs.com",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
-  "exports": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./dist/*": "./dist/*",
+    "./package.json": "./package.json"
+  },
   "types": "./dist/index.d.ts",
   "scripts": {
     "clear": "rimraf ./dist",
