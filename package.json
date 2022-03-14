@@ -6,7 +6,12 @@
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "exports": {
-    "./": "./dist/index.js",
+    ".": {
+      "types": "./types/index.d.ts",
+      "import": {
+        "default": "./dist/index.js"
+      }
+    },
     "./math": {
       "types": "./types/math/index.d.ts",
       "import": "./dist/math/index.js"
@@ -14,7 +19,9 @@
     "./string": {
       "types": "./types/string/index.d.ts",
       "import": "./dist/string/index.js"
-    }
+    },
+    "./dist/*": "./dist/*",
+    "./package.json": "./package.json"
   },
   "types": "./types/index.d.ts",
   "scripts": {
