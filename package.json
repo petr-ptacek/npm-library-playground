@@ -6,16 +6,16 @@
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "exports": "./dist/index.js",
-  "types": "./types/index.d.ts",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "clear": "rimraf ./dist ./types",
-    "build": "npm run build:ts & npm run build:types",
-    "build:ts": "rimraf ./dist & tsc --project ./tsconfig.base.json",
-    "build:types": "rimraf ./types & tsc --project ./tsconfig.types.json"
+    "clear": "rimraf ./dist",
+    "build": "npm run clear && npm run build:ts && npm run build:types",
+    "dev": "run-p -l \"build:ts -- --watch\" \"build:types -- --watch\"",
+    "build:ts": "tsc --build ./tsconfig.base.json",
+    "build:types": "tsc --build ./tsconfig.types.json"
   },
   "files": [
-    "dist",
-    "types"
+    "dist"
   ],
   "keywords": [
     "library",
@@ -32,6 +32,7 @@
   "author": "Petr Ptacek <petr.ptacek99@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
     "typescript": "^4.6.2"
   }

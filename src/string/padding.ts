@@ -1,5 +1,4 @@
-export function padding(str: string, maxLength: number = 0, fillString: string = ''): string {
-  return str
-    .padStart(maxLength, fillString)
-    .padEnd(maxLength, fillString);
+export function padding(str: string, length: number = 0, fillString: string = ''): string {
+  const fill = Array.from({ length }, () => fillString).join('');
+  return `${ fill }${ str }${ fill }`;
 }
