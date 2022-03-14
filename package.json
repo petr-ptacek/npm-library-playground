@@ -7,8 +7,8 @@
   "module": "./dist/index.js",
   "exports": {
     ".": "./dist/index.js",
-    "./math": "./dist/math/index.js",
-    "./string": "./dist/string/index.js"
+    "math": "./dist/math/index.js",
+    "string": "./dist/string/index.js"
   },
   "types": "./types",
   "scripts": {
