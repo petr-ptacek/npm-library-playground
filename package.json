@@ -5,24 +5,7 @@
   "description": "The library to test npm and npmjs.com",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
-  "exports": {
-    ".": {
-      "import": {
-        "types": "./types/index.d.ts",
-        "default": "./dist/index.js"
-      }
-    },
-    "./math": {
-      "types": "./types/math/index.d.ts",
-      "import": "./dist/math/index.js"
-    },
-    "./string": {
-      "types": "./types/string/index.d.ts",
-      "import": "./dist/string/index.js"
-    },
-    "./dist/*": "./dist/*",
-    "./package.json": "./package.json"
-  },
+  "exports": "./dist/index.js",
   "types": "./types/index.d.ts",
   "scripts": {
     "clear": "rimraf ./dist ./types",
