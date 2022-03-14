@@ -8,19 +8,22 @@
   "exports": {
     ".": {
       "import": {
+        "types": "./types/index.d.ts",
         "default": "./dist/index.js"
       }
     },
     "./math": {
+      "types": "./types/math/index.d.ts",
       "import": "./dist/math/index.js"
     },
     "./string": {
+      "types": "./types/string/index.d.ts",
       "import": "./dist/string/index.js"
     },
     "./dist/*": "./dist/*",
     "./package.json": "./package.json"
   },
-  "types": "./dist/index.d.ts",
+  "types": "./types/index.d.ts",
   "scripts": {
     "clear": "rimraf ./dist ./types",
     "build": "npm run build:ts & npm run build:types",
