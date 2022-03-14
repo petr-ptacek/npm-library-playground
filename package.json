@@ -7,8 +7,14 @@
   "module": "./dist/index.js",
   "exports": {
     "./": "./dist/index.js",
-    "./math": "./dist/math/index.js",
-    "./string": "./dist/string/index.js"
+    "./math": {
+      "import": "./dist/math/index.js",
+      "types": "./types/math/index.d.ts"
+    },
+    "./string": {
+      "import": "./dist/string/index.js",
+      "types": "./types/string/index.d.ts"
+    }
   },
   "types": "./types/index.d.ts",
   "scripts": {
